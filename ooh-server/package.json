@@ -1,0 +1,47 @@
+{
+  "name": "ooh-server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://git.doit.wisc.edu/cdis/cs/courses/cs506/sp2023/l1_06/ooh-server.git",
+  "author": "Reno Raksi <adriano.raksi@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "ts-node-dev src/app.ts",
+    "build": "tsc",
+    "lint": "eslint '**/*.{js,ts}'",
+    "prepare": "husky install"
+  },
+  "dependencies": {
+    "@types/body-parser": "^1.19.2",
+    "@types/express": "^4.17.17",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "mysql2": "^3.2.0",
+    "nodemailer": "^6.9.1",
+    "sequelize": "^6.31.1",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.0.2"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.56.0",
+    "@typescript-eslint/parser": "^5.56.0",
+    "eslint": "^8.2.0",
+    "eslint-config-airbnb-base": "15.0.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-import-resolver-typescript": "^3.5.3",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-prettier": "^4.2.1",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.0",
+    "prettier": "^2.8.6"
+  },
+  "lint-staged": {
+    "**/*.{js,ts}": [
+      "prettier -w",
+      "eslint --max-warnings=0"
+    ],
+    "**/*.json": [
+      "prettier -w"
+    ]
+  }
+}
